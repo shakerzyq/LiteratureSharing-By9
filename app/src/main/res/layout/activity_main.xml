@@ -9,7 +9,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="旅  记"
+        android:text="分享您的创作"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
         android:textSize="30sp"
@@ -17,7 +17,7 @@
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@mipmap/shangbiao"
+        android:background="@mipmap/title"
         android:id="@+id/shangbiao"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="100dp"
@@ -77,7 +77,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="2017-2020@安旅by-rick "
+        android:text="2017-2020@by-9 "
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         />
