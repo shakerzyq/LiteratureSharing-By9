@@ -69,7 +69,6 @@ public class Register1Activity extends AppCompatActivity {
                     }
                     if (responseData.equals("")) {
                         textView.setText("该账号已存在");
-                        System.out.println("nihao");
                         url=url1;
                     }
                 }else{
