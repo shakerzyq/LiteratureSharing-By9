@@ -13,7 +13,7 @@ import java.io.IOException;
 
 import Utils.HttpUtil;
 import domain.User;
-import okhttp3.Call;
+import okhttp3.*;
 import okhttp3.Response;
 
 public class Register1Activity extends AppCompatActivity {
@@ -69,6 +69,7 @@ public class Register1Activity extends AppCompatActivity {
                     }
                     if (responseData.equals("")) {
                         textView.setText("该账号已存在");
+                        System.out.println("nihao");
                         url=url1;
                     }
                 }else{
