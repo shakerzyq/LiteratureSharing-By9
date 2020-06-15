@@ -7,7 +7,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c48cde8e-ed8c-4c83-b10c-d9ae95e6059b" name="Default Changelist" comment="完成了注册功能,添加了对象转json的工具类">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.6.4/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.6.4/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -58,7 +60,7 @@
     <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2020-06-05T14:16:42.135Z" />
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/app/src/main/res/mipmap-xhdpi" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/src/main/res/layout" />
     <property name="project.structure.last.edited" value="SDK Location" />
     <property name="project.structure.proportion" value="0.17" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -69,12 +71,16 @@
       <recent name="com.example.literaturesharing" />
       <recent name="com.example.literaturesharing.zyq" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="domain" />
+      <recent name="com.example.literaturesharing" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\WorkSpace\AndroidStudioProjects\project4\LiteratureSharing\LiteratureSharing-By9\app\src\main\res\layout" />
+      <recent name="E:\WorkSpace\AndroidStudioProjects\project4\LiteratureSharing\LiteratureSharing-By9\app\src\main\res\mipmap-xxhdpi" />
       <recent name="E:\WorkSpace\AndroidStudioProjects\LiteratureSharing\app\src\main\res\mipmap-xhdpi" />
       <recent name="E:\WorkSpace\AndroidStudioProjects\LiteratureSharing\app\src\main\res\layout" />
       <recent name="E:\WorkSpace\AndroidStudioProjects\LiteratureSharing\app\src\main\res\mipmap-mdpi" />
-      <recent name="E:\WorkSpace\AndroidStudioProjects\LiteratureSharing\app\src\main\res\mipmap-xxhdpi" />
-      <recent name="E:\WorkSpace\AndroidStudioProjects\LiteratureSharing\app\src\main\java" />
     </key>
   </component>
   <component name="RunDashboard">
