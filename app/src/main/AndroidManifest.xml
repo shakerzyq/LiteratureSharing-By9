@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/logo"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.DarkActionBar">
-        <activity android:name=".ZyqLibraryActivity"></activity>
+        <activity android:name=".Main2Activity"></activity>
+        <activity android:name=".ZyqLibraryActivity" />
         <activity android:name=".ZyqTestActivity" />
         <activity android:name=".ZyqFindPwdShowActivity" />
         <activity android:name=".ZyqFindPwdEditActivity" />
