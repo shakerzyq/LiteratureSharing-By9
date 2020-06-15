@@ -3,8 +3,11 @@ package Utils;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
+import java.util.List;
+
 import domain.PwdProtect;
 import domain.User;
+import domain.WorkForFind;
 import okhttp3.FormBody;
 import okhttp3.MediaType;
 import okhttp3.RequestBody;
@@ -37,5 +40,10 @@ public class JsonAndObject {
         Gson gson = new Gson();
         User user = gson.fromJson(responseData, new TypeToken<User>() {}.getType());
         return user;
+    }
+    public static List<WorkForFind> toWorks(String responseData){
+        Gson gson = new Gson();
+        List<WorkForFind> workForFinds = gson.fromJson(responseData, new TypeToken<WorkForFind>() {}.getType());
+        return workForFinds;
     }
 }

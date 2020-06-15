@@ -2,11 +2,15 @@ package com.example.literaturesharing;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 public class ZyqTestActivity extends AppCompatActivity {
 
+    private String userid;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -14,10 +18,23 @@ public class ZyqTestActivity extends AppCompatActivity {
         setContentView(R.layout.zyq_activity_test);
 
         TextView textView = findViewById(R.id.logintest);
+        Button button = findViewById(R.id.wenku);
+
 
         Bundle bundle = this.getIntent().getExtras();
-        String userid = bundle.getString("userid");
+        userid = bundle.getString("userid");
 
         textView.setText(userid);
+
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ZyqTestActivity.this,ZyqLibraryActivity.class);
+                Bundle bundle1 = new Bundle();
+                bundle1.putString("userid",userid);
+                intent.putExtras(bundle1);
+                startActivity(intent);
+            }
+        });
     }
 }

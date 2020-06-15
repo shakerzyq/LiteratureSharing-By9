@@ -89,21 +89,19 @@ public class ZyqLoginActivity extends AppCompatActivity {
                             HttpUtil.sendOkHttpRequest1(url,requestBody,new Callback(){
                                 @Override
                                 public void onResponse(Call call, Response response) throws IOException {
-                                   /* // 先判断一下服务器是否异常
-                                    String responseStr = response.toString();
-                                    //得到服务器返回的具体内容
-                                    if (responseStr.contains("200")){
-
-                                    }*/
                                         String responseData=response.body().string();
                                     if(!responseData.equals("")){
-                                        //Toast.makeText(ZyqLoginActivity.this,"欢迎回来",Toast.LENGTH_LONG).show();
-                                        Intent intent = new Intent(ZyqLoginActivity.this,ZyqTestActivity.class);
-                                        Bundle bundle1 = new Bundle();
-                                        bundle1.putString("userid",userid);
-                                        intent.putExtras(bundle1);
-                                        startActivity(intent);
-                                        finish();
+                                        User user = JsonAndObject.toUser(responseData);
+                                        if(user.getUserstatus()==0){
+                                            Intent intent = new Intent(ZyqLoginActivity.this,ZyqTestActivity.class);
+                                            Bundle bundle1 = new Bundle();
+                                            bundle1.putString("userid",userid);
+                                            intent.putExtras(bundle1);
+                                            startActivity(intent);
+                                            finish();
+                                        }else {
+                                            showToastInThread(ZyqLoginActivity.this, "该账号已被封禁");
+                                        }
                                     }else{
                                         showToastInThread(ZyqLoginActivity.this, "账号或密码错误");
                                     }
@@ -116,20 +114,7 @@ public class ZyqLoginActivity extends AppCompatActivity {
                             });
                         }
                     }).start();
-                   /* getResult();
-                    if (result1){
-                        Toast.makeText(ZyqLoginActivity.this,"欢迎回来",Toast.LENGTH_LONG).show();
-                        Intent intent = new Intent(ZyqLoginActivity.this,ZyqTestActivity.class);
-                        Bundle bundle1 = new Bundle();
-                        bundle1.putString("userid",userid);
-                        intent.putExtras(bundle1);
-                        startActivity(intent);
-                        finish();
-                    }else{
-                        Toast.makeText(ZyqLoginActivity.this,"用户名或密码错误",Toast.LENGTH_LONG).show();
-                    }*/
                 }
-
             }
         });
     }
@@ -157,33 +142,6 @@ public class ZyqLoginActivity extends AppCompatActivity {
         return status;
     }
 
-    /**
-    *create by 周杨清 on 2020/6/7
-    *介绍: okhttp线程方法
-     *//*
-    private void getResult() {
-        new Thread(new Runnable() {
-            @Override
-            public void run() {
-                HttpUtil.sendOkHttpRequest1(url,requestBody,new Callback(){
-                    @Override
-                    public void onResponse(Call call, Response response) throws IOException {
-                        //得到服务器返回的具体内容
-                        String responseData=response.body().string();
-                        if(responseData!=null){
-                            result1=true;
-                        }else
-                            result1=false;
-                    }
-                    @Override
-                    public void onFailure(Call call,IOException e){
-                        //在这里进行异常情况处理
-                    }
-                });
-            }
-        }).start();
-    }
-*/
     /**
     *create by 周杨清 on 2020/6/7
     *介绍: 监听编辑框的状态,全都输入方可点击按钮,否则无响应
